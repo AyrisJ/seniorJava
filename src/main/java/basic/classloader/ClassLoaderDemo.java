@@ -1,6 +1,5 @@
 package basic.classloader;
 
-import org.apache.catalina.loader.WebappClassLoader;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -35,16 +34,6 @@ public class ClassLoaderDemo {
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }
-    }
-
-    @Test
-    public void testTomcatClassLoader() {
-        System.out.println("Tomcat WebappClassLoader--------");
-        ClassLoader parentClassLoader = WebappClassLoader.class.getClassLoader();
-        while (parentClassLoader != null) {
-            System.out.println(parentClassLoader);
-            parentClassLoader = parentClassLoader.getParent();
         }
     }
 
